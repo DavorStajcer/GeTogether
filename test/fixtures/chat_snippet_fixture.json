@@ -1,0 +1,15 @@
+{
+    "eventName": "tEventName",
+    "adminImageUrl": "tAdminImageUrl",
+    "lastMessageDate": {
+        "year" : 2021,
+        "month" : 1,
+        "day" : 1,
+        "hour" : 1,
+        "minute" : 1,
+        "second" : 1,
+        "millisecond" : 1,
+        "microsecond" : 1
+    },
+    "lastMessageSnippet": "tLastMesageSnippet"
+}

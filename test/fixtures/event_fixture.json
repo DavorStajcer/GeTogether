@@ -1,0 +1,20 @@
+{
+    "eventType": 0,
+    "dateString": "07.12.1998.",
+    "timeString": "21:10",
+    "location": {
+        "latitude": 0.0,
+        "longitude": 0.0
+    },
+    "adminId": "adminId",
+    "adminUsername": "adminUsername",
+    "adminImageUrl": "adminImageUrl",
+    "adminRating": 0,
+    "numberOfPeople": 0,
+    "description": "description",
+    "peopleImageUrls":  {
+        "userId1" : "url1",
+        "userId2" : "url2",
+        "userId3" : "url3"
+      }
+}

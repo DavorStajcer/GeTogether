@@ -1,0 +1,11 @@
+{
+    "userId" : "tUserId",
+    "username": "username",
+    "imageUrl" : "tImageUrl",
+    "city": "city",
+    "country": "country",
+    "description": "description",
+    "friendsCount": 1,
+    "rating": 1,
+    "numberOfVotes": 1
+}
