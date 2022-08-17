@@ -26,14 +26,11 @@ class LocationServiceImpl extends LocationService {
     if (!isConnected) return Left(NetworkFailure());
     bool serviceEnabled;
     LocationPermission permission;
-
     log("CHECKING IS LOCATION ENABLED");
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    log("checked -> $serviceEnabled");
     if (!serviceEnabled) {
       return Left(LocationFailure(message: 'Location services are disabled.'));
     }
-
     permission = await Geolocator.checkPermission();
     try {
       if (permission == LocationPermission.denied) {
@@ -43,7 +40,6 @@ class LocationServiceImpl extends LocationService {
               LocationFailure(message: 'Location permissions are denied'));
         }
       }
-
       if (permission == LocationPermission.deniedForever) {
         return Left(LocationFailure(
             message:
@@ -64,11 +60,8 @@ class LocationServiceImpl extends LocationService {
         "key": "AIzaSyDyi4MtJcldL85gBRT_STdjg8ckpCxpFY4",
       }),
     );
-
     final jsonRepsonse = json.decode(response.body);
-
     final List<dynamic> results = jsonRepsonse["results"];
-
     String? city;
     results.forEach((result) {
       (result["address_components"] as List).forEach((adressComponent) {
@@ -79,7 +72,6 @@ class LocationServiceImpl extends LocationService {
         });
       });
     });
-
     return city;
   }
 

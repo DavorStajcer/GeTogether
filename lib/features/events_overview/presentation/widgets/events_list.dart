@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import "package:flutter/material.dart";
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_together_app/core/widgets/event_card/event_card.dart';
@@ -21,7 +19,6 @@ class EventsList extends StatelessWidget {
     BlocProvider.of<EventsOverviewBloc>(context).add(EventsScreenInitialized());
     return BlocBuilder<EventsOverviewBloc, EventsOverviewState>(
       builder: (context, state) {
-        log("state -> $state");
         if (state is EventsOverviewLoading)
           return Center(
             child: CircularProgressIndicator(),
