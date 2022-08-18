@@ -13,6 +13,5 @@ abstract class UserEventsRepository {
   Future<Either<Failure, Success>> declineJoinRequest(
       JoinEventNotificationModel notification);
   Future<Either<Failure, List<Event>>> getAllUserEvents();
-  @override
   Future<Either<Failure, List<String>>> getAllUserEventIds();
 }

@@ -29,7 +29,7 @@ class EventMessageRepositoryImpl extends EventMessagesRepository {
     FirebaseFirestore? firebaseFirestore,
     required this.networkInfo,
     // required this.locationService,
-  })   : firebaseAuth = firebaseAuth ?? FirebaseAuth.instance,
+  })  : firebaseAuth = firebaseAuth ?? FirebaseAuth.instance,
         firebaseFirestore = firebaseFirestore ?? FirebaseFirestore.instance;
 
   @override
@@ -77,6 +77,9 @@ class EventMessageRepositoryImpl extends EventMessagesRepository {
         if (docChange.type == DocumentChangeType.added) {
           final timestamp = docChange.doc.data()!["timestamp"];
           log("DOC ADDED -> $timestamp");
+          if (timestamp != null) {
+            changedData.add(docChange.doc.data()!);
+          }
         }
       }
 
