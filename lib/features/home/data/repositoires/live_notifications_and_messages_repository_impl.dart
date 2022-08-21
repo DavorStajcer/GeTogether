@@ -16,12 +16,13 @@ class LiveNotificationsAndMessagesRepositoryImpl
     FirebaseAuth? firebaseAuth,
     FirebaseFirestore? firebaseFirestore,
     required this.networkInfo,
-  })   : firebaseAuth = firebaseAuth ?? FirebaseAuth.instance,
+  })  : firebaseAuth = firebaseAuth ?? FirebaseAuth.instance,
         firebaseFirestore = firebaseFirestore ?? FirebaseFirestore.instance;
 
   @override
   Stream<int> listenToNewNotificationsNum() {
     final currentUser = firebaseAuth.currentUser;
+
     if (currentUser == null) return Stream<int>.empty();
     return firebaseFirestore
         .collection("users")

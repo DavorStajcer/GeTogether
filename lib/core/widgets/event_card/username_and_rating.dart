@@ -4,7 +4,7 @@ import 'package:get_together_app/core/widgets/user_star_rating.dart';
 
 class UsernameAndRating extends StatelessWidget {
   final int rating;
-  final int numberOfPeople;
+  //final int numberOfPeople;
   final String adminUsername;
   final String eventName;
 
@@ -12,7 +12,7 @@ class UsernameAndRating extends StatelessWidget {
     Key? key,
     required this.rating,
     required this.adminUsername,
-    required this.numberOfPeople,
+    //required this.numberOfPeople,
     required this.eventName,
   }) : super(key: key);
 
@@ -25,10 +25,11 @@ class UsernameAndRating extends StatelessWidget {
         Container(
           width: 50,
           height: 16,
-          child: AutoSizeText(
+          child: const SizedBox(),
+          /*     child: AutoSizeText(
             "$numberOfPeople people",
             style: TextStyle(color: Colors.grey),
-          ),
+          ) */
         ),
         Container(
           width: double.infinity,

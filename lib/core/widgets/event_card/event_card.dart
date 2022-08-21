@@ -50,7 +50,7 @@ class _EventCardState extends State<EventCard> {
                     imageUrl: widget.event.adminImageUrl,
                     username: widget.event.adminUsername,
                     eventName: widget.event.eventName,
-                    numberOfPeople: widget.event.numberOfPeople,
+                    //numberOfPeople: widget.event.numberOfPeople,
                   ),
                 ),
                 Expanded(

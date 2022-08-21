@@ -8,14 +8,14 @@ class EventAdmin extends StatelessWidget {
   final EventType eventType;
   final String username;
   final String eventName;
-  final int numberOfPeople;
+  //final int numberOfPeople;
   const EventAdmin({
     Key? key,
     required this.imageUrl,
     required this.eventType,
     required this.eventName,
     required this.username,
-    required this.numberOfPeople,
+    // required this.numberOfPeople,
   }) : super(key: key);
 
   @override
@@ -30,10 +30,11 @@ class EventAdmin extends StatelessWidget {
         ),
         Expanded(
           child: UsernameAndRating(
-              rating: 5,
-              adminUsername: username,
-              eventName: eventName,
-              numberOfPeople: numberOfPeople),
+            rating: 5,
+            adminUsername: username,
+            eventName: eventName,
+            //numberOfPeople: numberOfPeople,
+          ),
         ),
       ],
     );

@@ -45,6 +45,7 @@ class ChatMessagesBloc extends Bloc<ChatMessagesEvent, ChatMessagesState> {
     if (event is ChatMessagesScreenInitialized) {
       final response = await loadInitalMessages(event.eventId);
       yield _onScreenInitializedToState(response, event.eventId);
+      final firstNextPa = await loadNewPage(event.eventId);
     }
     if (event is LeavingChatScreen) {
       await listenToMessages.stop();

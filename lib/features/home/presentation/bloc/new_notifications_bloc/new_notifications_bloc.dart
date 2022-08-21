@@ -22,6 +22,6 @@ class NewNotificationsBloc
     else if (event is NewNotificationsClosing)
       listenToNewNotifications.stop();
     else
-      emit(NewNotificationsLoaded((event as NewNotificationNumChanged).num));
+      yield NewNotificationsLoaded((event as NewNotificationNumChanged).num);
   }
 }

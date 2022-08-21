@@ -46,7 +46,7 @@ class AdminDetails extends StatelessWidget {
             child: EventAdmin(
               eventType: eventType,
               imageUrl: adminImageUrl,
-              numberOfPeople: numberOfPeople,
+              // numberOfPeople: numberOfPeople,
               eventName: eventName,
               username: adminUsername,
             ),
